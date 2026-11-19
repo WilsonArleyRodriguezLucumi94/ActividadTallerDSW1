@@ -12,21 +12,22 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('viajes', function (Blueprint $table) {
+    $table->id();
 
-            $table->foreignId('ruta_id')
-                ->constrained('rutas')
-                ->restrictOnDelete();
+    $table->foreignId('ruta_id')
+        ->constrained('rutas')
+        ->restrictOnDelete();
 
-            $table->foreignId('vehiculo_id')
-                ->constrained('vehiculos')
-                ->restrictOnDelete();
+    $table->foreignId('vehiculo_id')
+        ->constrained('vehiculos')
+        ->restrictOnDelete();
 
-            $table->date('fecha');
-            $table->time('hora');
-            $table->decimal('precio', 10, 2);
+    $table->date('fecha');
+    $table->time('hora');
+    $table->decimal('precio', 10, 2);
 
-            $table->timestamps();
-        });
+    $table->timestamps();
+});
     }
 
     /**

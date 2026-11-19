@@ -12,24 +12,23 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->id();
+    $table->id();
 
-            $table->foreignId('pasajero_id')
-                ->constrained('pasajeros')
-                ->restrictOnDelete();
+    $table->foreignId('pasajero_id')
+        ->constrained('pasajeros')
+        ->restrictOnDelete();
 
-            $table->foreignId('viaje_id')
-                ->constrained('viajes')
-                ->restrictOnDelete();
+    $table->foreignId('viaje_id')
+        ->constrained('viajes')
+        ->restrictOnDelete();
 
-            $table->unsignedInteger('numero_asiento');
+    $table->unsignedInteger('numero_asiento');
+    $table->string('estado')->default('pendiente');
 
-            $table->string('estado')->default('pendiente');
+    $table->timestamps();
 
-            $table->timestamps();
-
-            $table->unique(['viaje_id', 'numero_asiento']);
-        });
+    $table->unique(['viaje_id', 'numero_asiento']);
+});
     }
 
     /**
