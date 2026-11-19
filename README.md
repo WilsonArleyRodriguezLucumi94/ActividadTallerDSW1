@@ -351,17 +351,7 @@ El archivo .env no debe publicarse en repositorios Git.
 
 Al finalizar el taller, el estudiante estará en capacidad de configurar, ejecutar y administrar una aplicación web desarrollada con Laravel, comprender su arquitectura, gestionar una base de datos relacional e identificar mecanismos básicos de seguridad informática.
 
-## 17. Autor
-
-Nombre del estudiante:
-
-Asignatura: Seguridad Informática
-
-Institución:
-
-Año: 2026
-
-## 18. Referencias
+## 17 Referencias
 
 - Laravel: https://laravel.com/docs
 - PHP: https://www.php.net/docs.php
